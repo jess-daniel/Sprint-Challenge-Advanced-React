@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 
 import Display from "./components/Display";
+import Toggle from "./components/Toggle";
 
 class App extends Component {
   constructor() {
@@ -27,7 +28,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Toggle />
         <Display data={this.state.data} />
+        <em data-testid="footer">I am the footer</em>
       </div>
     );
   }
