@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 
+import Display from "./components/Display";
+
 class App extends Component {
   constructor() {
     super();
@@ -23,7 +25,11 @@ class App extends Component {
   }
 
   render() {
-    return <div className="App">{/* <Display /> */}</div>;
+    return (
+      <div className="App">
+        <Display data={this.state.data} />
+      </div>
+    );
   }
 }
 
